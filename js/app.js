@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const courseName = btn.getAttribute('data-course-name') || 'Selected Course';
       const courseId = btn.getAttribute('data-course-id') || '';
       const inquirySection = document.getElementById('inquiry');
-      const subjectSelect = document.getElementById('studentSubject');
+      const subjectSelect = document.getElementById('courseInterest');
 
       if (subjectSelect) {
         for (let i = 0; i < subjectSelect.options.length; i++) {
@@ -159,10 +159,10 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       const name = document.getElementById('studentName')?.value || 'Parent';
-      const phone = document.getElementById('studentPhone')?.value || '';
-      const grade = document.getElementById('studentGrade')?.value || 'Tuition';
-      const subject = document.getElementById('studentSubject')?.value || 'Course';
-      const location = document.getElementById('studentLocation')?.value || 'Jammu';
+      const phone = document.getElementById('phone')?.value || '';
+      const grade = document.getElementById('classGrade')?.value || 'Tuition';
+      const subject = document.getElementById('courseInterest')?.value || 'Course';
+      const location = document.getElementById('area')?.value || 'Jammu';
 
       // Validation
       if (!phone || phone.length < 10) {
