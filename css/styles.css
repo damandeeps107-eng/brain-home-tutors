@@ -326,17 +326,43 @@ img {
 .hero-redesigned-section {
   position: relative;
   min-height: 650px;
-  background-image: url('../assets/hero_slider_3.jpg');
-  background-size: cover;
-  background-position: center;
+  background-color: var(--dark-navy);
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 @media (min-width: 992px) {
   .hero-redesigned-section {
     height: 700px;
   }
+}
+
+.hero-bg-slider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.5s ease-in-out, transform 6s linear;
+  transform: scale(1.05); /* Slight initial zoom */
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1); /* Smooth Ken Burns zoom out effect */
 }
 
 .hero-bg-overlay {

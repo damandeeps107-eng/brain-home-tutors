@@ -6,75 +6,23 @@
 document.addEventListener('DOMContentLoaded', () => {
   
   // --- 1. Full-Background Image Slider Component ---
-  const bgSlides = document.querySelectorAll('.hero-bg-slide');
-  const heroDots = document.querySelectorAll('.hero-slider-dots-bar .hero-dot');
-  const prevBtn = document.getElementById('slidePrev');
-  const nextBtn = document.getElementById('slideNext');
+  const heroSlides = document.querySelectorAll('.hero-slide');
   let currentSlide = 0;
-  let slideTimer;
-
-  function showSlide(index) {
-    if (bgSlides.length === 0) return;
-    if (index >= bgSlides.length) currentSlide = 0;
-    else if (index < 0) currentSlide = bgSlides.length - 1;
-    else currentSlide = index;
-
-    bgSlides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === currentSlide);
-    });
-    heroDots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentSlide);
-    });
-  }
 
   function nextSlide() {
-    showSlide(currentSlide + 1);
+    if (heroSlides.length === 0) return;
+    
+    heroSlides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % heroSlides.length;
+    heroSlides[currentSlide].classList.add('active');
   }
 
-  function prevSlide() {
-    showSlide(currentSlide - 1);
+  // Change slide every 5 seconds
+  if (heroSlides.length > 1) {
+    setInterval(nextSlide, 5000);
   }
 
-  function startSlideTimer() {
-    stopSlideTimer();
-    slideTimer = setInterval(nextSlide, 3800);
-  }
 
-  function stopSlideTimer() {
-    if (slideTimer) clearInterval(slideTimer);
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      nextSlide();
-      startSlideTimer();
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      prevSlide();
-      startSlideTimer();
-    });
-  }
-
-  heroDots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const idx = parseInt(dot.getAttribute('data-index'));
-      showSlide(idx);
-      startSlideTimer();
-    });
-  });
-
-  // Start auto slide
-  startSlideTimer();
-
-  // Pause slider on hover over hero section
-  const heroSection = document.getElementById('hero');
-  if (heroSection) {
-    heroSection.addEventListener('mouseenter', stopSlideTimer);
-    heroSection.addEventListener('mouseleave', startSlideTimer);
-  }
 
   // --- 2. Mobile Menu Drawer Toggle ---
   const mobileToggle = document.getElementById('mobileToggle');
