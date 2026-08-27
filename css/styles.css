@@ -368,9 +368,14 @@ img {
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: var(--dark-navy); /* #182235 */
-  opacity: 0.85; /* Professional dark navy overlay */
+  background: linear-gradient(90deg, rgba(24,34,53,1) 0%, rgba(24,34,53,0.85) 45%, rgba(24,34,53,0) 100%);
   z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .hero-bg-overlay {
+    background: linear-gradient(180deg, rgba(24,34,53,0.95) 0%, rgba(24,34,53,0.8) 50%, rgba(24,34,53,0.2) 100%);
+  }
 }
 
 .hero-content-wrapper {
