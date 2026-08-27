@@ -1334,4 +1334,9 @@ img {
   .stats-grid, .steps-grid { grid-template-columns: 1fr; }
   #location > .container > div { grid-template-columns: 1fr !important; }
   .section-padding { padding: 4rem 0; }
+  
+  /* Fix header overlaps on mobile */
+  .brand-logo-text span.sub { display: none; }
+  .nav-actions .btn-orange { display: none; }
+  .contact-quick span { display: none; }
 }
