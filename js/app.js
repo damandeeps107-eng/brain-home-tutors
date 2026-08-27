@@ -176,14 +176,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // Reset form
       inquiryForm.reset();
 
-      // Simulated WhatsApp dispatch option
-      setTimeout(() => {
-        const waMsg = `Hi Brains Home Tutors Jammu, I have submitted an inquiry for ${name}. Grade: ${grade}, Course: ${subject}, Location: ${location}. Phone: ${phone}. Please assign a tutor!`;
-        const waUrl = `https://wa.me/919419291913?text=${encodeURIComponent(waMsg)}`;
-        if (confirm("Would you like to open WhatsApp to connect directly with Academic Coordinator on 9419291913 right now?")) {
-          window.open(waUrl, '_blank');
-        }
-      }, 1000);
+      // Direct WhatsApp dispatch without timeout/confirm to avoid popup blockers
+      const waMsg = `Hi Brains Home Tutors Jammu, I have submitted an inquiry for ${name}. Grade: ${grade}, Course: ${subject}, Location: ${location}. Phone: ${phone}. Please assign a tutor!`;
+      const waUrl = `https://wa.me/919419291913?text=${encodeURIComponent(waMsg)}`;
+      
+      // Open WhatsApp directly
+      window.open(waUrl, '_blank');
     });
   }
 
