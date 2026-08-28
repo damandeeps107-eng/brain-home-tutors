@@ -1034,6 +1034,18 @@ img {
   border-bottom: 1px solid var(--border-light);
 }
 
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
 /* ================= 11. REQUEST HOME TUTOR / ENQUIRY CTA (Primary Orange #F97316) ================= */
 /* White text & dark button */
 .final-cta-section {
@@ -1410,7 +1422,7 @@ img {
 /* --- Responsive Rules --- */
 @media (max-width: 1024px) {
   .hero-text-card h1 { font-size: 2.8rem; }
-  .about-grid, .benefits-grid, .inquiry-grid, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-grid, .benefits-grid, .location-grid, .inquiry-grid, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-full-stats, .stats-grid, .steps-grid { grid-template-columns: 1fr 1fr; }
 }
 
