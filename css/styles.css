@@ -76,6 +76,7 @@ body {
   background-color: var(--bg-white);
   color: var(--text-body);
   line-height: 1.65;
+  padding-top: 84px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -205,7 +206,7 @@ img {
 
 /* ================= 1. NAVBAR (White #FFFFFF) ================= */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
