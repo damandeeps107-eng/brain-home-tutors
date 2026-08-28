@@ -314,6 +314,10 @@ img {
   font-size: 1.15rem;
 }
 
+.mobile-contact-label {
+  display: none;
+}
+
 .mobile-toggle {
   display: none;
   background: none;
@@ -1414,10 +1418,23 @@ img {
   .nav-links { display: none; }
   .mobile-toggle { display: block; }
   
+  /* Header Contact Label on Mobile */
+  .contact-quick {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .desktop-phone { display: none; }
+  .mobile-contact-label {
+    display: block !important;
+    font-size: 0.7rem;
+    line-height: 1;
+    font-weight: 600;
+  }
+  
   /* Hero section mobile typography */
   .hero-top-sub { font-size: 1.05rem; }
-  .hero-main-title { font-size: 1.85rem; margin-bottom: 15px; }
-  .hero-main-subtitle { font-size: 1.6rem; }
+  .hero-main-title { font-size: 1.7rem; margin-bottom: 15px; }
+  .hero-main-subtitle { font-size: 1.5rem; }
   .hero-subtitle-text { font-size: 1.05rem; }
   .hero-subtitle-highlight { font-size: 0.95rem; }
   .hero-content-wrapper { padding: 4rem 15px; } /* Prevent touching borders */
