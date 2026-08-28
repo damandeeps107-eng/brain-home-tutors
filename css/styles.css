@@ -551,9 +551,16 @@ img {
   background: var(--bg-white);
   padding: 2.5rem;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   border: 1px solid var(--border-light);
+  border-top: 4px solid var(--primary-orange);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.about-logo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .about-logo-card img {
@@ -572,14 +579,16 @@ img {
   background: var(--bg-white);
   padding: 1.8rem;
   border-radius: var(--radius-md);
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--dark-navy);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   transition: var(--transition);
 }
 
 .feature-box:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-left: 3px solid var(--primary-orange);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
 }
 
 .feature-icon {
