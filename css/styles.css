@@ -1432,15 +1432,29 @@ img {
   
   /* Header Contact Label on Mobile */
   .contact-quick {
-    flex-direction: column;
-    gap: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--dark-navy);
+    padding: 5px 10px;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.25);
+    border-radius: 20px;
+    text-decoration: none;
+    white-space: nowrap;
   }
-  .desktop-phone { display: none; }
-  .mobile-contact-label {
-    display: block !important;
-    font-size: 0.7rem;
-    line-height: 1;
-    font-weight: 600;
+  .contact-quick i {
+    font-size: 0.9rem;
+    color: var(--primary-orange);
+  }
+  .desktop-phone {
+    display: inline-block !important;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--dark-navy);
   }
   
   /* Hero section mobile typography */
@@ -1459,7 +1473,8 @@ img {
   .section-padding { padding: 4rem 0; }
   
   /* Fix header overlaps on mobile */
+  .brand-logo-text { font-size: 1.1rem; }
   .brand-logo-text span.sub { display: none; }
+  .nav-actions { gap: 0.5rem; }
   .nav-actions .btn-orange { display: none; }
-  .contact-quick span { display: none; }
 }
