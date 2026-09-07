@@ -70,8 +70,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Stylesheet (Cache-busted v2.4) -->
-  <link rel="stylesheet" href="css/styles.css?v=2.4">
+  <!-- Stylesheet (Cache-busted v2.5) -->
+  <link rel="stylesheet" href="css/styles.css?v=2.5">
 </head>
 <body>
 
@@ -248,124 +248,83 @@
     <div class="container">
       <div class="section-header">
         <div class="badge badge-orange-light">Specialized Batches</div>
-        <h2>Our 6 Core Courses & Programs in Jammu</h2>
-        <p>Tailored 1-on-1 home coaching modules designed for Boards CBSE, JKBOSE & ICSE, NEET UG, IIT-JEE (Mains & Advanced), and NDA.</p>
+        <h2>Our 9 Core Courses & Programs in Jammu</h2>
+        <p>Tailored 1-on-1 home coaching modules designed for Boards CBSE, JKBOSE & ICSE, NEET UG, IIT-JEE (Mains & Advanced), NDA, IISER/BITSAT/VITEEE, and Olympiad Foundation.</p>
       </div>
 
       <!-- Filter Tabs -->
       <div class="course-tabs">
-        <button class="tab-btn active" data-filter="all">All 6 Courses</button>
-        <button class="tab-btn" data-filter="class-9-10">Class 9th & 10th</button>
-        <button class="tab-btn" data-filter="jee-prep">IIT-JEE Prep</button>
-        <button class="tab-btn" data-filter="neet-prep">NEET Prep</button>
-        <button class="tab-btn" data-filter="maths-course">Mathematics</button>
-        <button class="tab-btn" data-filter="chem-course">Chemistry</button>
+        <button class="tab-btn active" data-filter="all">All 9 Courses</button>
+        <button class="tab-btn" data-filter="class-11-12">11th & 12th</button>
         <button class="tab-btn" data-filter="phys-course">Physics</button>
+        <button class="tab-btn" data-filter="chem-course">Chemistry</button>
+        <button class="tab-btn" data-filter="maths-course">Maths</button>
+        <button class="tab-btn" data-filter="neet-prep">NEET UG</button>
+        <button class="tab-btn" data-filter="jee-prep">IIT-JEE</button>
+        <button class="tab-btn" data-filter="nda-prep">NDA</button>
+        <button class="tab-btn" data-filter="other-entrance">IISER / BITSAT</button>
+        <button class="tab-btn" data-filter="foundation">Olympiad Foundation</button>
       </div>
 
-      <!-- Courses Grid: Exactly 6 Cards -->
+      <!-- Courses Grid: Exactly 9 Cards -->
       <div class="courses-grid" id="coursesGrid">
         
-        <!-- Course 1 -->
-        <div class="course-card" data-category="class-9-10">
-          <div style="height: 180px; background-image: url('assets/hero_slider_4.jpg'); background-size: cover; background-position: center;"></div>
-          <div class="course-body">
-            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">Class 9th & 10th</div>
-            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">Science & Maths Foundation</h3>
-            <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
-              Build a solid academic foundation. Designed for board exams and early NEET/JEE prep.
-            </p>
-            <ul class="course-highlights" style="margin-bottom: 1.5rem;">
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Board exam focus</li>
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Conceptual clarity</li>
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Regular mock tests</li>
-            </ul>
-            <div class="course-footer" style="margin-top: auto;">
-              <button class="btn btn-outline-white enquire-course-btn" data-course-id="class-9-10" data-course-name="Class 9th & 10th Foundation" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
-                View Details
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Course 2 -->
-        <div class="course-card" data-category="jee-prep">
-          <div style="height: 180px; background-image: url('assets/hero_slider_3.jpg'); background-size: cover; background-position: center;"></div>
-          <div class="course-body">
-            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">JEE MAIN + ADVANCED</div>
-            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">IIT-JEE Prep</h3>
-            <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
-              Advanced-level coaching with deep problem-solving and rigorous practice for IIT-JEE.
-            </p>
-            <ul class="course-highlights" style="margin-bottom: 1.5rem;">
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Multi-concept problems</li>
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Integer & matrix questions</li>
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Full-length mock tests</li>
-            </ul>
-            <div class="course-footer" style="margin-top: auto;">
-              <button class="btn btn-outline-white enquire-course-btn" data-course-id="jee-prep" data-course-name="IIT-JEE Prep" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
-                View Details
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Course 3 -->
-        <div class="course-card" data-category="neet-prep">
-          <div style="height: 180px; background-image: url('assets/hero_slider_2.jpg'); background-size: cover; background-position: center;"></div>
-          <div class="course-body">
-            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">MEDICAL UG</div>
-            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">NEET Prep</h3>
-            <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
-              Dedicated NEET preparation covering Physics, Chemistry, and Biology.
-            </p>
-            <ul class="course-highlights" style="margin-bottom: 1.5rem;">
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> All 3 NEET subjects</li>
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Previous 10 years papers</li>
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Rank improvement strategy</li>
-            </ul>
-            <div class="course-footer" style="margin-top: auto;">
-              <button class="btn btn-outline-white enquire-course-btn" data-course-id="neet-prep" data-course-name="NEET Prep" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
-                View Details
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Course 4 -->
-        <div class="course-card" data-category="maths-course">
+        <!-- Course 1: 11th & 12th -->
+        <div class="course-card" data-category="class-11-12">
           <div style="height: 180px; background-image: url('assets/hero_slider_1.jpg'); background-size: cover; background-position: center;"></div>
           <div class="course-body">
-            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">11th & 12th</div>
-            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">Mathematics</h3>
+            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">BOARDS PREP</div>
+            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">11th & 12th</h3>
             <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
-              Master Calculus, Algebra, and Geometry with extensive numerical practice.
+              Complete 1-on-1 home coaching for Physics, Chemistry, Maths & Biology tailored for CBSE, JKBOSE & ICSE boards.
             </p>
             <ul class="course-highlights" style="margin-bottom: 1.5rem;">
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Calculus & Algebra focus</li>
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Short-trick methods</li>
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Speed & accuracy building</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Complete board blueprint focus</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Chapter-wise mock tests</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Concept clarity & scoring tactics</li>
             </ul>
             <div class="course-footer" style="margin-top: auto;">
-              <button class="btn btn-outline-white enquire-course-btn" data-course-id="maths-course" data-course-name="Mathematics" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
+              <button class="btn btn-outline-white enquire-course-btn" data-course-id="class-11-12" data-course-name="11th & 12th Boards" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
                 View Details
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Course 5 -->
+        <!-- Course 2: Physics -->
+        <div class="course-card" data-category="phys-course">
+          <div style="height: 180px; background-image: url('assets/physics_chemistry_tutor.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="course-body">
+            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">SPECIALIZED SUBJECT</div>
+            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">Physics</h3>
+            <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
+              Strong focus on theory, derivations, and solving complex numericals for Class 11th, 12th, NEET & JEE.
+            </p>
+            <ul class="course-highlights" style="margin-bottom: 1.5rem;">
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Mechanics & Electromagnetism</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Step-by-step numerical solving</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Formula & derivation sheets</li>
+            </ul>
+            <div class="course-footer" style="margin-top: auto;">
+              <button class="btn btn-outline-white enquire-course-btn" data-course-id="phys-course" data-course-name="Physics" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3: Chemistry -->
         <div class="course-card" data-category="chem-course">
           <div style="height: 180px; background-image: url('assets/hero_slider_3.jpg'); background-size: cover; background-position: center;"></div>
           <div class="course-body">
-            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">11th & 12th</div>
+            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">SPECIALIZED SUBJECT</div>
             <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">Chemistry</h3>
             <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
-              Clear concepts in Physical, Organic, and Inorganic Chemistry.
+              Clear concepts in Physical, Organic, and Inorganic Chemistry with specialized compartment & entrance prep.
             </p>
             <ul class="course-highlights" style="margin-bottom: 1.5rem;">
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Organic mechanisms</li>
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Physical numericals</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Organic reaction mechanisms</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Physical chemistry calculations</li>
               <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Inorganic memory techniques</li>
             </ul>
             <div class="course-footer" style="margin-top: auto;">
@@ -376,22 +335,132 @@
           </div>
         </div>
 
-        <!-- Course 6 -->
-        <div class="course-card" data-category="phys-course">
-          <div style="height: 180px; background-image: url('assets/hero_slider_3.jpg'); background-size: cover; background-position: center;"></div>
+        <!-- Course 4: Maths -->
+        <div class="course-card" data-category="maths-course">
+          <div style="height: 180px; background-image: url('assets/hero_slider_1.jpg'); background-size: cover; background-position: center;"></div>
           <div class="course-body">
-            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">11th & 12th</div>
-            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">Physics</h3>
+            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">SPECIALIZED SUBJECT</div>
+            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">Maths</h3>
             <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
-              Strong focus on theory, derivations, and solving complex numericals.
+              Master Calculus, Algebra, Geometry, and Trigonometry with extensive numerical speed building.
             </p>
             <ul class="course-highlights" style="margin-bottom: 1.5rem;">
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Mechanics & Electromagnetism</li>
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Concept visualization</li>
-              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Formula derivation sheets</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Calculus & Algebra focus</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Short-trick methods & speed</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Board & entrance practice</li>
             </ul>
             <div class="course-footer" style="margin-top: auto;">
-              <button class="btn btn-outline-white enquire-course-btn" data-course-id="phys-course" data-course-name="Physics" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
+              <button class="btn btn-outline-white enquire-course-btn" data-course-id="maths-course" data-course-name="Maths" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 5: NEET UG -->
+        <div class="course-card" data-category="neet-prep">
+          <div style="height: 180px; background-image: url('assets/hero_slider_2.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="course-body">
+            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">MEDICAL ENTRANCE</div>
+            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">NEET UG</h3>
+            <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
+              Dedicated NEET medical preparation covering Physics, Chemistry, and Biology with NCERT line-by-line focus.
+            </p>
+            <ul class="course-highlights" style="margin-bottom: 1.5rem;">
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> All 3 NEET subjects</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Previous 10+ years papers</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> High-yield rank improvement</li>
+            </ul>
+            <div class="course-footer" style="margin-top: auto;">
+              <button class="btn btn-outline-white enquire-course-btn" data-course-id="neet-prep" data-course-name="NEET UG" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 6: IIT-JEE -->
+        <div class="course-card" data-category="jee-prep">
+          <div style="height: 180px; background-image: url('assets/hero_tutor_student.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="course-body">
+            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">ENGINEERING ENTRANCE</div>
+            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">IIT-JEE</h3>
+            <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
+              Advanced-level coaching with deep multi-concept problem solving and practice for JEE Mains & Advanced.
+            </p>
+            <ul class="course-highlights" style="margin-bottom: 1.5rem;">
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Multi-concept problem solving</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Integer & matrix questions</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Full-length mock test series</li>
+            </ul>
+            <div class="course-footer" style="margin-top: auto;">
+              <button class="btn btn-outline-white enquire-course-btn" data-course-id="jee-prep" data-course-name="IIT-JEE" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 7: NDA -->
+        <div class="course-card" data-category="nda-prep">
+          <div style="height: 180px; background-image: url('assets/hero_slider_1.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="course-body">
+            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">DEFENCE ENTRANCE</div>
+            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">NDA</h3>
+            <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
+              Specialized coaching for National Defence Academy written exam focusing on Mathematics & General Ability Test (GAT).
+            </p>
+            <ul class="course-highlights" style="margin-bottom: 1.5rem;">
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> NDA Mathematics speed tricks</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> GAT & General Science guidance</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Previous years solved papers</li>
+            </ul>
+            <div class="course-footer" style="margin-top: auto;">
+              <button class="btn btn-outline-white enquire-course-btn" data-course-id="nda-prep" data-course-name="NDA" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 8: IISER, BITSAT & VITEEE -->
+        <div class="course-card" data-category="other-entrance">
+          <div style="height: 180px; background-image: url('assets/hero_slider_3.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="course-body">
+            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">SCIENCE & ENGG ENTRANCE</div>
+            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">IISER, BITSAT & VITEEE</h3>
+            <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
+              Customized preparation modules for premier national science research (NEST/IISER) and engineering entrance exams (BITSAT/VITEEE).
+            </p>
+            <ul class="course-highlights" style="margin-bottom: 1.5rem;">
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Research & aptitude problem solving</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Speed-based BITSAT/VITEEE practice</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> NEST & IISER conceptual mastery</li>
+            </ul>
+            <div class="course-footer" style="margin-top: auto;">
+              <button class="btn btn-outline-white enquire-course-btn" data-course-id="other-entrance" data-course-name="NEST, IISER, BITSAT & VITEEE" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 9: Olympiad & Foundation -->
+        <div class="course-card" data-category="foundation">
+          <div style="height: 180px; background-image: url('assets/hero_slider_4.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="course-body">
+            <div class="badge badge-navy" style="margin-bottom: 0.6rem; font-size: 0.75rem;">CLASS 9TH & 10TH</div>
+            <h3 style="color: var(--dark-navy); margin-bottom: 0.5rem;">Olympiad & Foundation</h3>
+            <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.5;">
+              Science & Maths foundation for Class 9th & 10th school boards, NTSE, and Olympiad competitive exams.
+            </p>
+            <ul class="course-highlights" style="margin-bottom: 1.5rem;">
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Strong Class 9 & 10 foundation</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Science & Maths Olympiad prep</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary-orange);"></i> Early analytical reasoning skills</li>
+            </ul>
+            <div class="course-footer" style="margin-top: auto;">
+              <button class="btn btn-outline-white enquire-course-btn" data-course-id="foundation" data-course-name="Olympiad & Foundation" style="width: 100%; border-color: var(--border-light); color: var(--dark-navy);">
                 View Details
               </button>
             </div>
@@ -535,13 +604,13 @@
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
           <p class="testimonial-quote">
-            "I was struggling with Physics numericals in Class 11th. My Brains Home tutor simplified mechanics completely. Scored 170/180 in NEET Physics!"
+            "A big thanks to Brains Home Tutors Jammu! Their guidance helped me overcome my fear of Physics and crack NEET in 2012. Today, I am working as a Heart Surgeon at Narayana Hospital, Katra. Truly grateful for their guidance and support."
           </p>
           <div class="reviewer-profile">
-            <div class="reviewer-avatar">AP</div>
+            <div class="reviewer-avatar" style="background: var(--primary-orange); color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%;">RS</div>
             <div class="reviewer-info">
-              <h5>Aarav Patel</h5>
-              <p>NEET UG Student (Physics, Chemistry & Biology)</p>
+              <h5 style="color: var(--dark-navy); font-size: 1rem; font-weight: 700; margin-bottom: 2px;">Dr. Ragini Sharma</h5>
+              <p style="color: var(--text-body); font-size: 0.82rem; font-weight: 500;">Heart Surgeon, Narayana Hospital, Katra, Jammu</p>
             </div>
           </div>
         </div>
@@ -552,13 +621,13 @@
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
           <p class="testimonial-quote">
-            "Calculus and Organic Chemistry reaction mechanisms felt like a nightmare. My home tutor provided custom memory maps. My Board score in Chemistry was 96%!"
+            "Brains Home Tutors played an important role in my journey. I cracked IIT-JEE Advance in 2014, and today I’m working as a Software Engineer at Google. Grateful for the guidance and support!"
           </p>
           <div class="reviewer-profile">
-            <div class="reviewer-avatar">SS</div>
+            <div class="reviewer-avatar" style="background: var(--dark-navy); color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%;">SP</div>
             <div class="reviewer-info">
-              <h5>Sneha Sharma</h5>
-              <p>Class 12th Board & IIT-JEE Aspirant</p>
+              <h5 style="color: var(--dark-navy); font-size: 1rem; font-weight: 700; margin-bottom: 2px;">Sahil Pandita</h5>
+              <p style="color: var(--text-body); font-size: 0.82rem; font-weight: 500;">Software Engineer, Google</p>
             </div>
           </div>
         </div>
@@ -569,13 +638,30 @@
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
           <p class="testimonial-quote">
-            "Brains Home Tutors assigned a top-notch verified tutor for my son in Class 10th Maths & Science. The weekly test report feature kept us informed. Highly recommended!"
+            "A big thanks to the Physics Tutor at Brains Home Tutors. Under his guidance, my daughter Aditi secured admission to VIT Vellore in Computer Science in 2026. We are truly grateful for his guidance and support."
           </p>
           <div class="reviewer-profile">
-            <div class="reviewer-avatar">RK</div>
+            <div class="reviewer-avatar" style="background: var(--primary-orange); color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%;">SM</div>
             <div class="reviewer-info">
-              <h5>Rajesh Gupta</h5>
-              <p>Parent of Class 10th Student in Jammu</p>
+              <h5 style="color: var(--dark-navy); font-size: 1rem; font-weight: 700; margin-bottom: 2px;">Seema Mahajan</h5>
+              <p style="color: var(--text-body); font-size: 0.82rem; font-weight: 500;">Mother of Aditi | Bank Manager, JK Bank, Jammu</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <div style="color: var(--primary-orange); margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "I got a compartment in Class 12 Chemistry and then contacted Brains Home Tutors. With just 2 months of focused preparation and expert guidance, I scored 85% in my CBSE Class 12 compartment exam. Truly grateful for their support!"
+          </p>
+          <div class="reviewer-profile">
+            <div class="reviewer-avatar" style="background: var(--dark-navy); color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%;">AK</div>
+            <div class="reviewer-info">
+              <h5 style="color: var(--dark-navy); font-size: 1rem; font-weight: 700; margin-bottom: 2px;">Aditya Kapoor</h5>
+              <p style="color: var(--text-body); font-size: 0.82rem; font-weight: 500;">Class 12th CBSE Student (85% in Chemistry Compartment)</p>
             </div>
           </div>
         </div>
