@@ -1234,6 +1234,32 @@ img {
   font-size: 0.85rem;
 }
 
+/* --- Floating WhatsApp Button --- */
+.whatsapp-floating-btn {
+  position: fixed;
+  bottom: 98px;
+  right: 25px;
+  z-index: 2000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.whatsapp-floating-btn:hover {
+  transform: scale(1.08);
+  color: white;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
 /* --- Floating AI Chatbot Widget --- */
 .chatbot-widget-container {
   position: fixed;
