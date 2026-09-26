@@ -133,6 +133,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- 7. Quick Inquiry Popup Logic ---
+  const quickPopupOverlay = document.getElementById('quickPopupOverlay');
+  const quickPopupClose = document.getElementById('quickPopupClose');
+  const quickPopupForm = document.getElementById('quickPopupForm');
+
+  // Trigger popup after 2.5 seconds if not closed in session
+  if (quickPopupOverlay && !sessionStorage.getItem('quickPopupDismissed')) {
+    setTimeout(() => {
+      quickPopupOverlay.classList.add('active');
+    }, 2500);
+  }
+
+  // Close popup handler
+  function closeQuickPopup() {
+    if (quickPopupOverlay) {
+      quickPopupOverlay.classList.remove('active');
+      sessionStorage.setItem('quickPopupDismissed', 'true');
+    }
+  }
+
+  if (quickPopupClose) {
+    quickPopupClose.addEventListener('click', closeQuickPopup);
+  }
+
+  if (quickPopupOverlay) {
+    quickPopupOverlay.addEventListener('click', (e) => {
+      if (e.target === quickPopupOverlay) {
+        closeQuickPopup();
+      }
+    });
+  }
+
+  // Popup Form Submit Handler
+  if (quickPopupForm) {
+    quickPopupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('popupStudentName')?.value || 'Student';
+      const phone = document.getElementById('popupPhone')?.value || '';
+      const grade = document.getElementById('popupGrade')?.value || 'Tuition';
+
+      if (!phone || phone.length < 10) {
+        showToast('Please enter a valid 10-digit mobile number.', 'warning');
+        return;
+      }
+
+      showToast(`Thank you ${name}! Registering your home tutor request for ${grade}...`, 'success');
+      
+      closeQuickPopup();
+      quickPopupForm.reset();
+
+      // Open WhatsApp directly to 9419291913
+      const waMsg = `Hi Brains Home Tutors Jammu, I want to request a 1-on-1 Home Tutor.\n\nName: ${name}\nPhone: ${phone}\nGrade/Course: ${grade}`;
+      const waUrl = `https://wa.me/919419291913?text=${encodeURIComponent(waMsg)}`;
+      
+      window.open(waUrl, '_blank');
+    });
+  }
+
   // --- 6. Toast Notification Helper ---
   function showToast(message, type = 'info') {
     let container = document.querySelector('.toast-container');
@@ -158,3 +217,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4500);
   }
 });
+

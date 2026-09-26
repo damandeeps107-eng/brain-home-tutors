@@ -1107,6 +1107,51 @@
     </div>
   </div>
 
+  <!-- ================= QUICK INQUIRY POPUP MODAL ================= -->
+  <div class="quick-popup-overlay" id="quickPopupOverlay">
+    <div class="quick-popup-card">
+      <button class="quick-popup-close" id="quickPopupClose" aria-label="Close Popup">&times;</button>
+      
+      <div class="quick-popup-header">
+        <img src="assets/logo.png" alt="Brains Home Tutors Jammu" class="quick-popup-logo">
+        <div>
+          <h4>Request 1-on-1 Home Tutor</h4>
+          <p>Get a verified tutor in Jammu in 4 hours!</p>
+        </div>
+      </div>
+
+      <form id="quickPopupForm">
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label for="popupStudentName" style="font-size: 0.85rem; font-weight: 600; color: var(--dark-navy);">Student / Parent Name *</label>
+          <input type="text" id="popupStudentName" class="form-input" placeholder="e.g. Rahul Sharma" required style="padding: 0.6rem 0.8rem; font-size: 0.9rem;">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label for="popupPhone" style="font-size: 0.85rem; font-weight: 600; color: var(--dark-navy);">Contact Number *</label>
+          <input type="tel" id="popupPhone" class="form-input" placeholder="e.g. 9419291913" required style="padding: 0.6rem 0.8rem; font-size: 0.9rem;">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label for="popupGrade" style="font-size: 0.85rem; font-weight: 600; color: var(--dark-navy);">Class / Grade *</label>
+          <select id="popupGrade" class="form-input" required style="padding: 0.6rem 0.8rem; font-size: 0.9rem;">
+            <option value="" disabled selected>Select Class</option>
+            <option value="Class 9th">Class 9th</option>
+            <option value="Class 10th">Class 10th</option>
+            <option value="Class 11th">Class 11th</option>
+            <option value="Class 12th">Class 12th</option>
+            <option value="NEET UG">NEET UG</option>
+            <option value="IIT JEE">IIT JEE</option>
+            <option value="NDA Prep">NDA Prep</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-orange" style="width: 100%; padding: 0.75rem; font-size: 0.95rem;">
+          <i class="fa-solid fa-paper-plane" style="margin-right: 6px;"></i> Request Home Tutor Now
+        </button>
+      </form>
+    </div>
+  </div>
+
   <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
   <a href="https://wa.me/919419291913" target="_blank" class="whatsapp-floating-btn" title="Chat on WhatsApp (9419291913)" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
