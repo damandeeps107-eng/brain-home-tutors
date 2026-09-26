@@ -1344,3 +1344,27 @@ img {
   .nav-actions { gap: 0.5rem; }
   .nav-actions .btn-orange { display: none; }
 }
+
+/* --- SEO Keywords Chips Section --- */
+.seo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: var(--bg-soft-grey);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--dark-navy);
+  transition: var(--transition);
+  text-decoration: none;
+}
+.seo-chip:hover {
+  background-color: var(--light-orange);
+  border-color: var(--primary-orange);
+  color: var(--primary-orange);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
