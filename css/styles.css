@@ -582,6 +582,23 @@ img {
   font-size: 0.95rem;
 }
 
+/* ================= 2.6 1:1 LIVE ONLINE TUITION ================= */
+.live-online-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 991px) {
+  .live-online-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
 /* Common Section Padding & Spacing */
 .section-padding {
   padding: 6.5rem 0; /* Updated to 104px */
