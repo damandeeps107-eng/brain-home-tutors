@@ -1561,3 +1561,125 @@ img {
   color: var(--primary-orange);
   font-weight: 600;
 }
+
+/* ==========================================================================
+   SUPER SMOOTH SCROLL REVEAL & MICRO-ANIMATION SUITE
+   ========================================================================== */
+
+/* Hardware Accelerated Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll Reveal Engine */
+.reveal-up {
+  opacity: 0;
+  transform: translate3d(0, 35px, 0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translate3d(-45px, 0, 0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translate3d(45px, 0, 0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92) translate3d(0, 20px, 0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Activated Visible State */
+.reveal-up.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* Stagger Delays for Grid Elements */
+.delay-100 { transition-delay: 0.1s; }
+.delay-150 { transition-delay: 0.15s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-250 { transition-delay: 0.25s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Continuous Micro Animations */
+@keyframes floatBadge {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulseOrangeGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(249, 115, 22, 0);
+  }
+}
+
+/* Floating Badges micro-interaction */
+.badge-orange-light, .live-session-badge, .hero-top-sub {
+  animation: floatBadge 3.5s ease-in-out infinite;
+}
+
+/* Card Hover Dynamics & Smooth Lift */
+.course-card, .benefit-card, .stat-card-box, .about-logo-card, .stats-strip-item, .locality-chip {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.course-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(249, 115, 22, 0.12);
+}
+
+.locality-chip:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: var(--light-orange);
+  border-color: var(--primary-orange);
+}
+
+/* Button Smooth Hover Scale & Shadow */
+.btn {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease;
+}
+
+.btn-orange:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.38);
+}
+
+/* Counselor CTA Bar Hover Effect */
+.counselor-cta-bar {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.counselor-cta-bar:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(249, 115, 22, 0.25);
+}
+
