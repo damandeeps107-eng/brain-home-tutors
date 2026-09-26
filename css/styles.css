@@ -598,6 +598,102 @@ img {
   }
 }
 
+/* ================= ACADEMIC COUNSELOR CTA BAR ================= */
+.counselor-cta-bar {
+  background: linear-gradient(135deg, #182235 0%, #0F172A 100%);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  box-shadow: var(--shadow-md);
+  color: white;
+}
+
+.counselor-info {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.counselor-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--primary-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.counselor-info h4 {
+  color: #FFFFFF;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.counselor-info p {
+  color: #94A3B8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.counselor-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.btn-whatsapp-strip {
+  background-color: #25D366;
+  color: white;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-whatsapp-strip:hover {
+  background-color: #1EBE57;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 868px) {
+  .counselor-cta-bar {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .counselor-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .counselor-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  .counselor-actions .btn, .counselor-actions .btn-whatsapp-strip {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
 
 /* Common Section Padding & Spacing */
 .section-padding {
