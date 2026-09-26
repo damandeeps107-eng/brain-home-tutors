@@ -1683,3 +1683,97 @@ html {
   box-shadow: 0 18px 36px rgba(249, 115, 22, 0.25);
 }
 
+/* ==========================================================================
+   SUPER SLEEK MOBILE OPTIMIZATIONS (Fast Reloading & Clean Compact Layout)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* Fast Scroll Animations for Mobile (Zero Lag) */
+  .reveal-up, .reveal-left, .reveal-right {
+    transform: translate3d(0, 14px, 0) !important;
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out !important;
+  }
+  .reveal-scale {
+    transform: scale(0.97) translate3d(0, 10px, 0) !important;
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out !important;
+  }
+
+  /* 1:1 Live Online Tuition Section Compact Mobile Layout */
+  .live-online-section {
+    padding: 2.5rem 0 !important;
+  }
+  .live-online-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+  
+  /* Compact Free Demo Class Banner for Mobile */
+  .demo-banner-box {
+    padding: 1.25rem 1rem !important;
+    border-radius: 16px !important;
+    margin-top: 1.25rem !important;
+  }
+  .demo-banner-box h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.35rem !important;
+  }
+  .demo-banner-box p {
+    font-size: 0.95rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .demo-banner-box .btn {
+    width: 100% !important;
+    padding: 0.65rem 1rem !important;
+    font-size: 0.88rem !important;
+    justify-content: center !important;
+  }
+
+  /* Compact Academic Counselor CTA Bar for Mobile */
+  .counselor-cta-bar {
+    padding: 1rem 1.1rem !important;
+    border-radius: 16px !important;
+    margin-top: 1.25rem !important;
+    flex-direction: column !important;
+    gap: 0.85rem !important;
+    text-align: left !important;
+  }
+  .counselor-info {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+  .counselor-icon {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    font-size: 1.15rem !important;
+  }
+  .counselor-info h4 {
+    font-size: 1rem !important;
+    margin-bottom: 1px !important;
+  }
+  .counselor-info p {
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+  }
+  .counselor-actions {
+    width: 100% !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+  }
+  .counselor-actions .btn, 
+  .counselor-actions .btn-whatsapp-strip {
+    flex: 1 !important;
+    width: 50% !important;
+    padding: 0.6rem 0.4rem !important;
+    font-size: 0.8rem !important;
+    justify-content: center !important;
+    border-radius: 50px !important;
+  }
+}
+
+
