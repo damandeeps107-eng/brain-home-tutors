@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://brainshometutorsjammu.com/sitemap.xml
+Sitemap: https://www.brainshometutors.in/sitemap.xml
