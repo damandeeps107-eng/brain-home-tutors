@@ -118,6 +118,23 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      // Send Lead to Admin Dashboard Cloud API
+      try {
+        fetch('/api/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'lead',
+            lead: {
+              name: name,
+              phone: phone,
+              course: `${grade} (${subject})`,
+              area: location
+            }
+          })
+        }).catch(() => {});
+      } catch (err) {}
+
       // Show toast notification
       showToast(`Thank you, ${name}! Your tutor inquiry for ${subject} has been registered. Our Academic Coordinator will call you at 9419291913 shortly!`, 'success');
 
@@ -178,6 +195,23 @@ document.addEventListener('DOMContentLoaded', () => {
         showToast('Please enter a valid 10-digit mobile number.', 'warning');
         return;
       }
+
+      // Send Lead to Admin Dashboard Cloud API
+      try {
+        fetch('/api/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'lead',
+            lead: {
+              name: name,
+              phone: phone,
+              course: grade,
+              area: 'Jammu'
+            }
+          })
+        }).catch(() => {});
+      } catch (err) {}
 
       showToast(`Thank you ${name}! Registering your home tutor request for ${grade}...`, 'success');
       

@@ -21,12 +21,29 @@ export default async function handler(req, res) {
       }
     });
     const gistData = await gistRes.json();
-    const fileContent = gistData.files && gistData.files['analytics.json'] ? gistData.files['analytics.json'].content : '{"visits":[],"wa":[],"calls":[]}';
+    const fileContent = gistData.files && gistData.files['analytics.json'] ? gistData.files['analytics.json'].content : '{"visits":[],"wa":[],"calls":[],"leads":[]}';
     const store = JSON.parse(fileContent);
+    if (!store.leads) store.leads = [];
 
     const now = new Date();
 
-    if (body.type === 'wa') {
+    if (body.type === 'lead') {
+      const newLead = {
+        id:     Date.now(),
+        name:   body.lead && body.lead.name ? body.lead.name : 'New Student',
+        phone:  body.lead && body.lead.phone ? body.lead.phone : '',
+        course: body.lead && body.lead.course ? body.lead.course : 'Tuition Inquiry',
+        area:   body.lead && body.lead.area ? body.lead.area : 'Jammu',
+        time:   'Just now',
+        status: 'new',
+        type:   'form',
+        ts:     now.toISOString()
+      };
+      store.leads.unshift(newLead);
+      if (store.leads.length > 500) store.leads = store.leads.slice(0, 500);
+      // Also count toward total enquiries
+      store.calls.push({ ts: now.toISOString() });
+    } else if (body.type === 'wa') {
       store.wa.push({ ts: now.toISOString() });
       if (store.wa.length > 2000) store.wa = store.wa.slice(-2000);
     } else if (body.type === 'call') {
