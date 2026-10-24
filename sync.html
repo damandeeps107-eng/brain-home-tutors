@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Analytics Sync Bridge</title>
+</head>
+<body style="display:none;">
+  <script>
+    (function () {
+      var ALLOWED_PIN = '7656';
+      var STORE_KEY   = 'bht_analytics_v2';
+      var LEADS_KEY   = 'bht_leads_v2';
+
+      window.addEventListener('message', function (e) {
+        if (!e.data || e.data.pin !== ALLOWED_PIN) return;
+
+        if (e.data.action === 'get_analytics') {
+          try {
+            var store = JSON.parse(localStorage.getItem(STORE_KEY)) || { visits:[], wa:[], calls:[], seeded:true, v:2 };
+            var leads = JSON.parse(localStorage.getItem(LEADS_KEY)) || [];
+            e.source.postMessage({
+              type:  'BHT_SYNC_RESPONSE',
+              store: store,
+              leads: leads
+            }, '*');
+          } catch (err) {}
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
