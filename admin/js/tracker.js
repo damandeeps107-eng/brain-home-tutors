@@ -57,17 +57,22 @@
 
   /* ── track page view ── */
   (function trackView() {
-    var d   = load();
-    var now = new Date();
-    d.visits.push({
-      ts:  now.toISOString(),
-      pg:  detectPage(),
-      dv:  detectDevice(),
-      ref: detectReferrer(),
-      hr:  now.getHours()
-    });
-    if (d.visits.length > 5000) d.visits = d.visits.slice(-5000);
-    save(d);
+    try {
+      var d   = load();
+      var now = new Date();
+      d.visits.push({
+        ts:  now.toISOString(),
+        pg:  detectPage(),
+        dv:  detectDevice(),
+        ref: detectReferrer(),
+        hr:  now.getHours()
+      });
+      if (d.visits.length > 5000) d.visits = d.visits.slice(-5000);
+      save(d);
+      console.log('✅ [Brains Tracker] Real visit recorded! Total:', d.visits.length);
+    } catch(err) {
+      console.warn('[Brains Tracker] Error:', err);
+    }
   })();
 
   /* ── track WhatsApp clicks ── */

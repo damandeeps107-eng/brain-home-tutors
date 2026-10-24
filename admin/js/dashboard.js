@@ -958,4 +958,20 @@ document.addEventListener('DOMContentLoaded', () => {
       updateKPIs(currentPeriod);
     }
   });
+
+  // 11. Active Auto-Refresh Poll (Checks localStorage every 2s)
+  let lastCount = loadStore().visits.length;
+  setInterval(() => {
+    const nowCount = loadStore().visits.length;
+    if (nowCount !== lastCount) {
+      lastCount = nowCount;
+      updateKPIs(currentPeriod);
+      initTrafficChart(currentPeriod);
+      initPageChart(currentPeriod);
+      initDeviceChart(currentPeriod);
+      initHoursChart(currentPeriod);
+      initReferrerChart(currentPeriod);
+      renderGoalTracker();
+    }
+  }, 2000);
 });
