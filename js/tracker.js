@@ -55,20 +55,32 @@
     return 'Direct';
   }
 
+  function sendCloudEvent(payload) {
+    try {
+      fetch('/api/track', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
   /* ── track page view ── */
   (function trackView() {
     try {
       var d   = load();
       var now = new Date();
-      d.visits.push({
+      var event = {
         ts:  now.toISOString(),
         pg:  detectPage(),
         dv:  detectDevice(),
         ref: detectReferrer(),
         hr:  now.getHours()
-      });
+      };
+      d.visits.push(event);
       if (d.visits.length > 5000) d.visits = d.visits.slice(-5000);
       save(d);
+      sendCloudEvent(event);
       console.log('✅ [Brains Tracker] Real visit recorded! Total:', d.visits.length);
     } catch(err) {
       console.warn('[Brains Tracker] Error:', err);
@@ -82,6 +94,7 @@
       d.wa.push({ ts: new Date().toISOString() });
       if (d.wa.length > 2000) d.wa = d.wa.slice(-2000);
       save(d);
+      sendCloudEvent({ type: 'wa' });
     }
   }, { passive: true });
 
@@ -92,6 +105,7 @@
       d.calls.push({ ts: new Date().toISOString() });
       if (d.calls.length > 2000) d.calls = d.calls.slice(-2000);
       save(d);
+      sendCloudEvent({ type: 'call' });
     }
   }, { passive: true });
 
